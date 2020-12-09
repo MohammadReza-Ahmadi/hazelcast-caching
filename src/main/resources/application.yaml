@@ -1,0 +1,40 @@
+
+server:
+  port: 8081
+  servlet:
+    context-path: /hazelcast
+
+service:
+   message:
+       code: 006
+
+spring:
+  main:
+    banner-mode: "off"
+
+  jpa:
+    database: POSTGRESQL
+    hibernate:
+      dialect: org.hibernate.dialect.PostgreSQLDialect
+      ddl-auto: create
+      show-sql: true
+      database-platform: org.hibernate.dialect.PostgreSQLDialect
+      generate-ddl: true
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/hazelcast
+    driver-class-name: org.postgresql.Driver
+    data-username: postgres
+    data-password: postgres
+    username: postgres
+    password: postgres
+
+  freemarker:
+    enabled: true
+    template-loader-path: classpath:/templates
+    suffix: .ftl
+
+logging:
+  level:
+    org:
+      springframework: info

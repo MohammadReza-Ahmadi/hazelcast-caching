@@ -1,0 +1,11 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+[remote "origin"]
+	url = https://gitlab.com/vosouq/backend/benchmark/caching.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "hazelcast"]
+	remote = origin
+	merge = refs/heads/hazelcast
